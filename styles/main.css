@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+    /* clear all the cruft from the default button styles */
+    border: none;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn {
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    color: #555;
+}
+
+#portal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.dialog-fade-in {
+    animation: dialog-fade-in 150ms ease forwards;
+}
+
+@keyframes dialog-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,231 @@
+
+// position: 'absolute',
+// left: 0,
+// top: 0,
+// width: comp.size.x * scale,
+// height: comp.size.y * scale,
+// transform: `${mtxStr} translate(${comp.pos.x}px, ${comp.pos.y}px) scale(${1/scale})`,
+// transformOrigin: '0 0',
+// backgroundColor: 'rgba(255, 0, 0, 0.5)',
+// pointerEvents: 'none',
+// boxSizing: 'border-box',
+
+.baseComp {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0px, 0px) scale(1);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.rectComp {
+    padding: 20px;
+}
+
+.memTable {
+    font-family: monospace;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.memRow {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    pointer-events: auto;
+    height: 26px;
+}
+
+.memRowAddr {
+    flex: 0 0 25px;
+    color: #707070;
+    text-align: right;
+    margin-right: 5px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.memRowBytes {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+
+    &.allZeros {
+        color: #555555;
+    }
+}
+
+.memRowByte {
+    flex: 1 0 0;
+    padding: 0 2px;
+    text-align: center;
+    border-radius: 2px;
+
+    &.byteRead {
+        background-color: #6da2f1;
+    }
+
+    &.byteWrite {
+        background-color: #e7f15a;
+        font-size: 80%;
+        line-height: 13px;
+        display: flex;
+        flex-direction: column;
+
+        & > div:first-child {
+            opacity: 0.5;
+        }
+    }
+}
+
+.addrInput {
+    pointer-events: auto;
+    width: 90px;
+
+}
+
+.inputNumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 4px;
+
+    .configMenuTopRight {
+        align-self: flex-start;
+    }
+
+    &_configMenu {
+        width: 400px;
+    }
+}
+
+.compPopup {
+    font-size: 24px;
+    background-color: #888;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.configMenuBtn {
+    pointer-events: auto;
+    cursor: pointer;
+    color: #707070;
+    // font-size: 12px;
+    &:hover {
+        color: #000000;
+    }
+}
+
+.menuRow {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    .title {
+        font-size: 15px;
+    }
+
+    // .content {
+    // }
+}
+
+.compAddressing {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 4px;
+    justify-content: flex-end;
+}
+
+.compLedOutputSimple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    font-family: monospace;
+    font-size: 24px;
+
+    .ledOutput {
+        pointer-events: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 0;
+    }
+
+    .ledOutputBit {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #707070;
+        margin: 0 8px;
+
+        &.enabled {
+            $onColor: #e7f15a;
+            $onColorRed: #f15a5a;
+            background-color: $onColorRed;
+            box-shadow: 0 0 10px 0 $onColorRed;
+        }
+    }
+
+}
+
+.compRegFileCtrl {
+    justify-content: flex-start;
+}
+
+.compBinGate {
+    background-color: rgba(red, 0.3);
+    border-radius: 4px;
+    &:hover {
+        background-color: rgba(red, 0.5);
+    }
+    cursor: pointer;
+    pointer-events: auto;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    // align-self: flex-end;
+}
+
+.regSelect {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 8px 0;
+    user-select: none;
+
+    input[type="checkbox"] {
+        cursor: pointer;
+        margin-right: 8px;
+    }
+
+    label {
+        // flex: 1 0 0;
+        display: flex;
+        align-items: center;
+        width: 70px;
+    }
+
+    .text {
+        flex: 1;
+        margin-right: 8px;
+        padding: 0 2px;
+        text-align: end;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .regHex {
+        flex: 0 0 50px;
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "name": "llm-viz",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3002",
+        "build": "next build",
+        "lint": "next lint",
+        "start": "next start",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "6.4.0",
+        "@fortawesome/free-brands-svg-icons": "6.4.0",
+        "@fortawesome/free-regular-svg-icons": "6.4.0",
+        "@fortawesome/free-solid-svg-icons": "6.4.0",
+        "@fortawesome/react-fontawesome": "0.2.0",
+        "@vercel/analytics": "1.0.2",
+        "clsx": "2.0.0",
+        "d3-color": "3.1.0",
+        "next": "13.4.19",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@next/bundle-analyzer": "14.0.2",
+        "@types/d3-color": "3.1.0",
+        "@types/node": "20.1.0",
+        "@types/react": "18.2.22",
+        "@types/react-dom": "18.2.7",
+        "@webgpu/types": "0.1.32",
+        "add": "2.0.6",
+        "autoprefixer": "10.4.15",
+        "eslint": "8.49.0",
+        "eslint-config-next": "13.4.19",
+        "eslint-plugin-react": "7.33.1",
+        "eslint-plugin-react-hooks": "4.6.0",
+        "msdf-bmfont-xml": "2.7.0",
+        "postcss": "8.4.29",
+        "postcss-import": "15.1.0",
+        "postcss-nesting": "12.0.1",
+        "postcss-scss": "4.0.8",
+        "sass": "1.66.1",
+        "svg2ttf": "6.0.3",
+        "svgicons2svgfont": "12.0.0",
+        "tailwindcss": "3.3.3",
+        "typescript": "5.2.2",
+        "yarn": "1.22.21"
+    },
+    "resolutions": {
+        "jimp": "0.22.10",
+        "update-notifier": "6.0.2",
+        "xml2js": "0.5.0"
+    },
+    "eslintConfig": {
+        "extends": [
+            "next",
+            "plugin:react/recommended"
+        ],
+        "rules": {
+            "react/prop-types": "off",
+            "react-hooks/exhaustive-deps": "error",
+            "react/no-unescaped-entities": "off",
+            "@next/next/no-img-element": "off",
+            "@next/next/no-page-custom-font": "off"
+        }
+    }
+}

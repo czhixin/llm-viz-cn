@@ -1,0 +1,31 @@
+@import '@/styles/variables.scss';
+@import "./shared.scss";
+
+.toolsTopLeft {
+    display: flex;
+    margin: 20px 20px 0;
+}
+
+.toolbar {
+    @include overlayTool;
+    height: 40px;
+    min-width: 40px;
+}
+
+.toolbarBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    padding: 0 10px;
+    &:hover:not(:disabled) {
+        background-color: rgba($color-highlight, 0.5);
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+}
