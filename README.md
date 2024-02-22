@@ -1,7 +1,7 @@
 
 # LLM 可视化演示（中文版）
 
-这是一个由 [Brendan Bycroft](https://bbycroft.net/) 开发制作非常意义的llm-viz项目的中文翻译版本，对学习了解LLM非常有帮忙，也可用于教学演示。
+这是一个由 [Brendan Bycroft](https://bbycroft.net/) 开发制作非常意义的 [llm-viz](https://github.com/bbycroft/llm-viz) 项目的中文翻译版本，对学习了解LLM非常有帮忙，也可用于教学演示。
 
 ## 项目介绍
 
