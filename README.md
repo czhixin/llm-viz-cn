@@ -21,3 +21,5 @@
 这是由 `AI探索官` 完成翻译，有不完善的地方或者翻译错误的地方欢迎指出，同时欢迎关注同名公众号 `AI探索官`
 
 一起探索更多的AI知识 [https://www.iiiai.com](https://www.iiiai.com)
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
